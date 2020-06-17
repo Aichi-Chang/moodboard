@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `with Finn & Jack`,
-    description: `Find all episodes and characters`,
+    title: ``,
+    description: ``,
     author: `@gatsbyjs`,
   },
   plugins: [
+    'gatsby-plugin-layout',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

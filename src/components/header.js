@@ -10,15 +10,14 @@ import Image from './image'
 const Header = ({ siteTitle }) => (
   <header
     css={css`
-      background-color: #0862a3;
-      margin-bottom: 1.45rem;
+      position: absolute;
+      width: 100%;
+      background-image: none;
+      background-color: transparent;
+      float: right;
+      // margin-bottom: 1.45rem;
     `}
   >
-    <div css={css`
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    `}>
         <div css={css`
         display: flex;
         justify-content: flex-end;
@@ -30,28 +29,30 @@ const Header = ({ siteTitle }) => (
           css={css`
             margin-right: 10px;
             font-size: 15px;
+            color: white;
           `}
         >
           Home
         </Link>
         <Link
-          to={`/charactors/`}
+          to={`/about/`}
           css={css`
-            // color: white;
+            color: white;
+            font-size: 15px;
+            margin-right: 10px;
+          `}
+        >
+          About
+        </Link>
+        <Link
+          to={`/posts/`}
+          css={css`
+            color: white; 
             margin-right: 10px;
             font-size: 15px;
           `}
         >
-          Charactors
-        </Link>
-        <Link
-          to={`/episodes/`}
-          css={css`
-            // color: white;
-            font-size: 15px;
-          `}
-        >
-          Episodes
+          Posts
         </Link>
       </div>
       
@@ -65,20 +66,7 @@ const Header = ({ siteTitle }) => (
           padding: 1.45rem 1.0875rem;
         `}
       >
-        <div style={{ width: '100%', marginRight: 10 }}>
-          <Image />
-        </div>
-        
-        <h1 css={css`
-          margin: 0;
-          color: white;
-          font-size: 15px;
-          width: 300px;
-        `}>
-            {siteTitle}
-        </h1> 
       </div>
-    </div>
     
   </header>
 )
