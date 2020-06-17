@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { css } from '@emotion/core'
-
+import { Link } from 'gatsby'
 import Image from './image'
 
 
@@ -9,29 +9,77 @@ import Image from './image'
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `#32a5e3`,
-      marginBottom: `1.45rem`,
-    }}
+    css={css`
+      background-color: #0862a3;
+      margin-bottom: 1.45rem;
+    `}
   >
-    <div
-      css={css`
+    <div css={css`
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    `}>
+        <div css={css`
         display: flex;
-        flex-direction: row;
+        justify-content: flex-end;
         align-items: center;
-        margin: 0;
-        max-width: 500px;
         padding: 1.45rem 1.0875rem;
-      `}
-    >
-      <div style={{ width: '30%', marginRight: 10 }}>
-        <Image />
+      `}>
+        <Link
+          to={`/`}
+          css={css`
+            margin-right: 10px;
+            font-size: 15px;
+          `}
+        >
+          Home
+        </Link>
+        <Link
+          to={`/charactors/`}
+          css={css`
+            // color: white;
+            margin-right: 10px;
+            font-size: 15px;
+          `}
+        >
+          Charactors
+        </Link>
+        <Link
+          to={`/episodes/`}
+          css={css`
+            // color: white;
+            font-size: 15px;
+          `}
+        >
+          Episodes
+        </Link>
       </div>
       
-       <h1 style={{ margin: 0, color: `white`, fontSize: 20 }}>
-          {siteTitle}
-      </h1> 
+      <div
+        css={css`
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: 0;
+          width: 300px;
+          padding: 1.45rem 1.0875rem;
+        `}
+      >
+        <div style={{ width: '100%', marginRight: 10 }}>
+          <Image />
+        </div>
+        
+        <h1 css={css`
+          margin: 0;
+          color: white;
+          font-size: 15px;
+          width: 300px;
+        `}>
+            {siteTitle}
+        </h1> 
+      </div>
     </div>
+    
   </header>
 )
 
