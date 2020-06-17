@@ -33,7 +33,6 @@ const Layout = ({ location, children }) => {
         }
       }}
     >
-      // This Header is an example for a component, that should remain between routes
       <Header />
       <TransitionViews>
         {children}
