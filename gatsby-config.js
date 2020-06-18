@@ -24,6 +24,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "aichi-website-bucket",
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
