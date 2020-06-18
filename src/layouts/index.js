@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
-// Example Header-Component (see below)
-import Header from "../components/header";
+
 
 const Layout = ({ location, children }) => {
   return (
@@ -33,7 +32,7 @@ const Layout = ({ location, children }) => {
         }
       }}
     >
-      <Header />
+      {/* <Header /> */}
       <TransitionViews>
         {children}
       </TransitionViews>

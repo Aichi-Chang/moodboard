@@ -10,12 +10,10 @@ import Image from './image'
 const Header = ({ siteTitle }) => (
   <header
     css={css`
-      position: absolute;
       width: 100%;
       background-image: none;
       background-color: transparent;
       float: right;
-      // margin-bottom: 1.45rem;
     `}
   >
         <div css={css`

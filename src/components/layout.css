@@ -2,12 +2,43 @@ html {
   /* font-family: sans-serif; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  /* min-height: 100%; */
 }
 body {
   margin: 0;
+  /* height: 100%; */
+  animation: background 12s ease infinite;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
+
+@keyframes background {
+  from {
+    background-color: #e1dded;
+  }
+  10% {
+    background-color: #efdaf2;
+  }
+  20% {
+    background-color: #edd1de;
+  }
+  30% {
+    background-color: #ebd3e7;
+  }
+  50% {
+    background-color: #d4c5e8;
+  }
+  70% {
+    background-color: #bdc1db;
+  }
+  90% {
+    background-color: #d1dae6;
+  }
+  to {
+    background-color: #e1dded;
+  }
+}
+
 article,
 aside,
 details,
